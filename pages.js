@@ -1,5 +1,5 @@
 module.exports = [{
-    url: '/app',
-    name: 'app',
+    url: '/index',
+    name: 'index',
     title: 'APP'
 }];
