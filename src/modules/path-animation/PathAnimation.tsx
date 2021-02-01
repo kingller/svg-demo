@@ -22,11 +22,11 @@ class PathAnimation extends React.Component {
                 <svg width="320" height="320" viewBox={`0 0 500 500`}>
                     <defs>
                         <style>{`.gs-edge-path{fill:none;stroke:url(#linear);stroke-width:1;}`}</style>
+                        <linearGradient id="linear">
+                            <stop offset="0%" style={{ stopColor: '#45FF9D' }} />
+                            <stop offset="100%" style={{ stopColor: '#48D0FF', stopOpacity: 0.83 }} />
+                        </linearGradient>
                     </defs>
-                    <linearGradient id="linear">
-                        <stop offset="0%" style={{ stopColor: '#45FF9D' }} />
-                        <stop offset="100%" style={{ stopColor: '#48D0FF', stopOpacity: 0.83 }} />
-                    </linearGradient>
                     <path id="gsPath" className="gs-edge-path" d={dAttr} />
                     <circle cx="0" cy="0" r={2} fill="#FF4AA1">
                         <animateMotion dur="2s" repeatCount="indefinite" rotate="auto">

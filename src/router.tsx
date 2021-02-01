@@ -12,6 +12,7 @@ import Rect from './modules/rect/Rect';
 import Circle from './modules/circle/Circle';
 import CircleAnimation from './modules/circle-animation/CircleAnimation';
 import Bezier from './modules/bezier/Bezier';
+import LinearGradient from './modules/linear-gradient/LinearGradient';
 import BezierAnimation from './modules/bezier-animation/BezierAnimation';
 import PathAnimation from './modules/path-animation/PathAnimation';
 
@@ -48,6 +49,7 @@ const MainWithRouter = withRouter(
                         <a href="#/circle">Circle</a>
                         <a href="#/circle-animation">Circle Animation</a>
                         <a href="#/bezier">Bezier</a>
+                        <a href="#/linear-gradient">Linear Gradient</a>
                         <a href="#/bezier-animation">Bezier Animation</a>
                         <a href="#/path-animation">Path Animation</a>
                     </div>
@@ -66,6 +68,12 @@ const MainWithRouter = withRouter(
                                             path="/circle-animation"
                                         />
                                         <Route key="bezier" exact={true} component={Bezier} path="/bezier" />
+                                        <Route
+                                            key="linear-gradient"
+                                            exact={true}
+                                            component={LinearGradient}
+                                            path="/linear-gradient"
+                                        />
                                         <Route
                                             key="bezier-animation"
                                             exact={true}

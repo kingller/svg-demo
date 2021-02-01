@@ -53,11 +53,11 @@ class BezierAnimation extends React.Component<{}, BezierAnimationState> {
                     @keyframes paintLine {
                         100%{stroke-dashoffset:0;}
                     }`}</style>
+                    <linearGradient id="linear">
+                        <stop offset="0%" style={{ stopColor: '#45FF9D' }} />
+                        <stop offset="100%" style={{ stopColor: '#48D0FF', stopOpacity: 0.83 }} />
+                    </linearGradient>
                 </defs>
-                <linearGradient id="linear">
-                    <stop offset="0%" style={{ stopColor: '#45FF9D' }} />
-                    <stop offset="100%" style={{ stopColor: '#48D0FF', stopOpacity: 0.83 }} />
-                </linearGradient>
                 <path
                     className={classnames('gs-edge-path', {
                         animated,
