@@ -49,7 +49,7 @@ class BezierAnimation extends React.Component<{}, BezierAnimationState> {
             <svg width="500" height="500" viewBox={`0 0 500 500`}>
                 <defs>
                     <style>{`.gs-edge-path{fill:none;stroke:url(#linear);stroke-width:1;stroke-dasharray:100%;stroke-dashoffset:100%;}
-                    .gs-edge-path.animated{animation:paintLine 1.2s linear;animation-fill-mode:forwards;}
+                    .gs-edge-path.animated{animation:paintLine 1.2s linear infinite;animation-fill-mode:forwards;}
                     @keyframes paintLine {
                         100%{stroke-dashoffset:0;}
                     }`}</style>
