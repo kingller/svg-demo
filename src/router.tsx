@@ -13,6 +13,7 @@ import Circle from './modules/circle/Circle';
 import CircleAnimation from './modules/circle-animation/CircleAnimation';
 import Bezier from './modules/bezier/Bezier';
 import BezierAnimation from './modules/bezier-animation/BezierAnimation';
+import PathAnimation from './modules/path-animation/PathAnimation';
 
 const MainWithRouter = withRouter(
     class Main extends React.Component<RouteComponentProps> {
@@ -48,6 +49,7 @@ const MainWithRouter = withRouter(
                         <a href="#/circle-animation">Circle Animation</a>
                         <a href="#/bezier">Bezier</a>
                         <a href="#/bezier-animation">Bezier Animation</a>
+                        <a href="#/path-animation">Path Animation</a>
                     </div>
                     <div className="layout-responsive-left-fixed page-container">
                         <div className="page-content">
@@ -69,6 +71,12 @@ const MainWithRouter = withRouter(
                                             exact={true}
                                             component={BezierAnimation}
                                             path="/bezier-animation"
+                                        />
+                                        <Route
+                                            key="path-animation"
+                                            exact={true}
+                                            component={PathAnimation}
+                                            path="/path-animation"
                                         />
                                         <Route key="home" exact={true} component={Home} path="/home" />
                                         <Redirect to="/line" />

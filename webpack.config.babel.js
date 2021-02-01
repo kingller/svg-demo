@@ -168,12 +168,12 @@ switch (mode) {
                 port,
                 useLocalIp: true,
                 disableHostCheck: true,
-                openPage: 'app',
+                openPage: 'index',
                 proxy: {
                     '/api/*': {
                         target: `http://localhost:${Number(port) + 1}`,
                     },
-                    '/app': { target: `http://localhost:${port}`, pathRewrite: { '$': '.html' } },
+                    '/index': { target: `http://localhost:${port}`, pathRewrite: { '$': '.html' } },
                 },
                 lazy: false,
                 compress: true, //启用gzip压缩
@@ -181,7 +181,6 @@ switch (mode) {
                     'X-Frame-Options': 'SAMEORIGIN',
                     'X-XSS-Protection': '1; mode=block',
                 },
-                disableHostCheck: true,
             },
         });
         break;

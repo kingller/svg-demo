@@ -46,7 +46,7 @@ class BezierAnimation extends React.Component<{}, BezierAnimationState> {
         const dAttr = `M${sourceX},${sourceY} C${sourceX},${centerY} ${centerX},${targetY} ${targetX},${targetY}`;
 
         return (
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 500 500`} width="500" height="500">
+            <svg width="500" height="500" viewBox={`0 0 500 500`}>
                 <defs>
                     <style>{`.gs-edge-path{fill:none;stroke:url(#linear);stroke-width:1;stroke-dasharray:100%;stroke-dashoffset:100%;}
                     .gs-edge-path.animated{animation:paintLine 1.2s linear;animation-fill-mode:forwards;}
