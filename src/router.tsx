@@ -15,6 +15,7 @@ import Bezier from './modules/bezier/Bezier';
 import LinearGradient from './modules/linear-gradient/LinearGradient';
 import BezierAnimation from './modules/bezier-animation/BezierAnimation';
 import PathAnimation from './modules/path-animation/PathAnimation';
+import Chart from './modules/chart/Chart';
 
 const MainWithRouter = withRouter(
     class Main extends React.Component<RouteComponentProps> {
@@ -52,6 +53,7 @@ const MainWithRouter = withRouter(
                         <a href="#/linear-gradient">Linear Gradient</a>
                         <a href="#/bezier-animation">Bezier Animation</a>
                         <a href="#/path-animation">Path Animation</a>
+                        <a href="#/chart">Chart</a>
                     </div>
                     <div className="layout-responsive-left-fixed page-container">
                         <div className="page-content">
@@ -86,6 +88,7 @@ const MainWithRouter = withRouter(
                                             component={PathAnimation}
                                             path="/path-animation"
                                         />
+                                        <Route key="chart" exact={true} component={Chart} path="/chart" />
                                         <Route key="home" exact={true} component={Home} path="/home" />
                                         <Redirect to="/line" />
                                     </RouterSwitch>
